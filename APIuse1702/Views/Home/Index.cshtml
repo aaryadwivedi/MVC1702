@@ -1,0 +1,17 @@
+﻿@model IEnumerable<User>
+
+    <h2>Users</h2>
+    <a asp-controller="Home" asp-action="Add" class="btn btn-sm btn-dark">Add</a>
+    <table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.FirstName @item.UserId</td>
+            <td><a asp-controller="Home" asp-action="Deets" asp-route-id="@item.UserId" class="btn btn-sm btn-dark">Details</a></td>
+            <td><a asp-controller="Home" asp-action="Update" asp-route-id="@item.UserId" class="btn btn-sm btn-dark">Update</a></td>
+            <td><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.UserId" class="btn btn-sm btn-dark">Delete</a></td>
+        </tr>
+    }
+</table>
+    

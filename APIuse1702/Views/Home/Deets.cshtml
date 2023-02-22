@@ -1,0 +1,8 @@
+﻿@model User
+
+        <h3>
+        @Model.UserId @Model.FirstName @Model.LastName
+        </h3>
+        Username: @Model.UserName
+        <br />
+        <a asp-controller="Home" asp-action="Index">Go Back</a>
